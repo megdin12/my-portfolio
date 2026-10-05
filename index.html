@@ -82,7 +82,6 @@
         }
       }
       .about {
-
       }
     </style>
   </head>
@@ -97,14 +96,20 @@
     </header>
     <section class="about">
       <h2>Обо мне</h2>
-       <h3>Кто я?</h3>
+      <h3>Кто я?</h3>
       <strong>Начинающий Frontend-разработчик.</strong>
       <h3>Что умею?</h3>
-      <ul>Владею HTML, CSS и Git</li>
-        <h3>Чем занимаюсь?</h3>
-      <ul>Сейчас учусь верстать адаптивные сайты.</li>
-        <h3>Планы</h3>
-      <ul>В планах - JavaScript и изучение AI-технологий.</li>
+      <ul>
+        <li>Владею HTML, CSS и Git</li>
+      </ul>
+      <h3>Чем занимаюсь?</h3>
+      <ul>
+        <li>Сейчас учусь верстать адаптивные сайты.</li>
+      </ul>
+      <h3>Планы</h3>
+      <ul>
+        <li>В планах - JavaScript и изучение AI-технологий.</li>
+      </ul>
     </section>
     <section>
       <h2>Проекты</h2>
@@ -134,5 +139,14 @@
       <a href="https://github.com/megdin12">megdin12</a>
     </section>
     <footer>© 2026 Мой бренд. Все права защищены.</footer>
+    <button id="myBtn">Нажми меня</button>
+    <script>
+      const button = document.querySelector("#myBtn");
+      button.addEventListener("click", function () {
+        console.log("Кнопка нажата!");
+
+        alert("Привет! Я изучаю Javascript!");
+      });
+    </script>
   </body>
 </html>
