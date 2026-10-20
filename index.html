@@ -139,13 +139,17 @@
       <a href="https://github.com/megdin12">megdin12</a>
     </section>
     <footer>© 2026 Мой бренд. Все права защищены.</footer>
+    <span id="counter">Нажато 0 раз</span>
     <button id="myBtn">Нажми меня</button>
     <script>
       const button = document.querySelector("#myBtn");
+      const counter = document.querySelector("#counter");
+      let count = 0;
       button.addEventListener("click", function () {
         console.log("Кнопка нажата!");
 
-        alert("Привет! Я изучаю Javascript!");
+        count++;
+        counter.textContent = "Нажато " + count + " раз ";
       });
     </script>
   </body>
