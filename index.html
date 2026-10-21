@@ -141,6 +141,7 @@
     <footer>© 2026 Мой бренд. Все права защищены.</footer>
     <span id="counter">Нажато 0 раз</span>
     <button id="myBtn">Нажми меня</button>
+    <button id="colorBtn">Сменить фон</button>
     <script>
       const button = document.querySelector("#myBtn");
       const counter = document.querySelector("#counter");
@@ -150,6 +151,11 @@
 
         count++;
         counter.textContent = "Нажато " + count + " раз ";
+      });
+      const colorBtn = document.querySelector("#colorBtn");
+      const bodyElement = document.body;
+      colorBtn.addEventListener("click", function () {
+        bodyElement.style.backgroundColor = "#e8e0f5";
       });
     </script>
   </body>
