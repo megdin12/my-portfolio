@@ -142,6 +142,10 @@
     <span id="counter">Нажато 0 раз</span>
     <button id="myBtn">Нажми меня</button>
     <button id="colorBtn">Сменить фон</button>
+    <button id="toggleBtn">Показать секрет</button>
+    <p id="secretText" style="display: none">
+      Мой самый большой страх - забыть точку с запятой в конце строки
+    </p>
     <script>
       const button = document.querySelector("#myBtn");
       const counter = document.querySelector("#counter");
@@ -156,6 +160,15 @@
       const bodyElement = document.body;
       colorBtn.addEventListener("click", function () {
         bodyElement.style.backgroundColor = "#e8e0f5";
+      });
+      const toggleBtn = document.querySelector("#toggleBtn");
+      const secretText = document.querySelector("#secretText");
+      toggleBtn.addEventListener("click", function () {
+        if (secretText.style.display === "none") {
+          secretText.style.display = "block";
+        } else {
+          secretText.style.display = "none";
+        }
       });
     </script>
   </body>
