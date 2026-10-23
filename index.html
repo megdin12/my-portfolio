@@ -146,6 +146,9 @@
     <p id="secretText" style="display: none">
       Мой самый большой страх - забыть точку с запятой в конце строки
     </p>
+    <input type="text" id="nameInput" placeholder="Ваше имя" />
+    <input type="email" id="emailInput" placeholder="Ваш Email" />
+    <button id="submitBtn">Отправить</button>
     <script>
       const button = document.querySelector("#myBtn");
       const counter = document.querySelector("#counter");
@@ -168,6 +171,16 @@
           secretText.style.display = "block";
         } else {
           secretText.style.display = "none";
+        }
+      });
+      const nameInput = document.querySelector("#nameInput");
+      const emailInput = document.querySelector("#emailInput");
+      const submitBtn = document.querySelector("#submitBtn");
+      submitBtn.addEventListener("click", function () {
+        if (nameInput.value === "" || emailInput.value === "") {
+          alert("Заполните все поля!");
+        } else {
+          alert("Спасибо, " + nameInput.value + "! Мы свяжемся с вами.");
         }
       });
     </script>
