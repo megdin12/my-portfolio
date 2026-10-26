@@ -149,6 +149,9 @@
     <input type="text" id="nameInput" placeholder="Ваше имя" />
     <input type="email" id="emailInput" placeholder="Ваш Email" />
     <button id="submitBtn">Отправить</button>
+    <input type="text" id="taskInput" placeholder="Новая задача" />
+    <button id="addTaskBtn">Добавить</button>
+    <ul id="taskList"></ul>
     <script>
       const button = document.querySelector("#myBtn");
       const counter = document.querySelector("#counter");
@@ -182,6 +185,27 @@
         } else {
           alert("Спасибо, " + nameInput.value + "! Мы свяжемся с вами.");
         }
+      });
+      const taskInput = document.querySelector("#taskInput");
+      const addTaskBtn = document.querySelector("#addTaskBtn");
+      const taskList = document.querySelector("#taskList");
+
+      let tasks = [];
+      function renderTasks() {
+        taskList.innerHTML = "";
+        tasks.forEach(function (task) {
+          let li = document.createElement("li");
+          li.textContent = task;
+          taskList.appendChild(li);
+        });
+      }
+
+      addTaskBtn.addEventListener("click", function () {
+        tasks.push(taskInput.value);
+        taskInput.value = "";
+        console.log(tasks);
+
+        renderTasks();
       });
     </script>
   </body>
