@@ -196,6 +196,14 @@
         tasks.forEach(function (task) {
           let li = document.createElement("li");
           li.textContent = task;
+          let deleteBtn = document.createElement("button");
+          deleteBtn.textContent = "Удалить";
+          deleteBtn.addEventListener("click", function () {
+            let index = tasks.indexOf(task);
+            tasks.splice(index, 1);
+            renderTasks();
+          });
+          li.appendChild(deleteBtn);
           taskList.appendChild(li);
         });
       }
